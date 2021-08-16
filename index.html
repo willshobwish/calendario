@@ -48,12 +48,17 @@
         display: none;
         margin-bottom: 40px;
     }
+
+    .legenda{
+        font-weight: bold;
+        text-align: center;
+    }
 </style>
 
 <body>
     <div class="cal-container">
         <!-- Substitua a linha abaixo com o seu próprio calendário -->
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%230B8043&showPrint=0&showCalendars=0&showTitle=0&showTz=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hNTIwMjFlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MGU2Njk5Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NDE5ZTY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200OWIyMjg0NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%230047a8&color=%230B8043&color=%23007b83&color=%23202124&color=%23174ea6&showTitle=0&showNav=1&showPrint=0&showTabs=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
     <br>
     <a class="button" onclick="show()" href="#android">Assinar calendário no Android</a>
@@ -80,6 +85,15 @@
             document.getElementById("android").style = "display: block;";
         }
     </script>
+    <div class="cal-container">
+        <p class = "legenda">Legenda</p>
+        <p style="font-weight: bold;">Cursos inclusos:</p>
+        <p>Matemática discreta</p>
+        <p>Fundamentos da matemática</p>
+        <p>Algoritmos e técnicas de programação</p>
+        <p>Introdução à ciência da computação</p>
+        <p>Física para computação</p>
+    </div>
 </body>
 
 </html>
