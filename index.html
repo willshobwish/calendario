@@ -6,6 +6,7 @@
     <meta name="author" content="Willian Murayama">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/icone.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Calendário da computação">
     <!-- Substitua a descrição abaixo --> 
@@ -53,6 +54,19 @@
         font-weight: bold;
         text-align: center;
     }
+
+    .botao{
+        max-width: 800px;
+        min-width: 600px;
+    }
+
+    .descricao-container{
+        margin-left: 10px;
+    }
+
+    .descricao{
+        margin: 0px;
+    }
 </style>
 
 <body>
@@ -61,19 +75,18 @@
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hNTIwMjFlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MGU2Njk5Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NDE5ZTY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200OWIyMjg0NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%230047a8&color=%230B8043&color=%23007b83&color=%23202124&color=%23174ea6&showTitle=0&showNav=1&showPrint=0&showTabs=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
     <br>
-    <a class="button" onclick="show()" href="#android">Assinar calendário no Android</a>
-    <!-- Substitua o link abaixo com o link iCal --> 
-    <a class="button" href="webcal://calendar.google.com/calendar/ical/c_ljv182aheqan0ag08sm5kgkd54%40group.calendar.google.com/public/basic.ics">
-        Assinar calendário no iOS</a>
-    <div id="android"> <div>Para assinar o calendário no Android, <a
-                href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta página</a> (confira
-            se você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:</div>
-         <!-- Substitua o value abaixo com o ID do calendário -->    
-        <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;"
-            value="c_ljv182aheqan0ag08sm5kgkd54@group.calendar.google.com">
-        <br>
-        <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
-        <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a> </div>
+    <div style="width: 800px;">
+        <div class="container">
+            <div style="text-align: center;"class="row">
+                <div class="col">
+                    <a type="button" class="btn btn-primary btn-lg" onclick="show()" href="#android">Assinar calendário no Android</a>
+                    <!-- Substitua o link abaixo com o link iCal --> </div>
+                <div class="col">
+                    <a type="button" class="btn btn-primary btn-lg" href="webcal://calendar.google.com/calendar/ical/c_ljv182aheqan0ag08sm5kgkd54%40group.calendar.google.com/public/basic.ics">
+                    Assinar calendário no iOS</a>
+                </div>
+            </div>
+    </div>
     <script>
         // Campo do ID Android - Copiar texto ao clicar
         document.getElementById("input").onclick = function () {
@@ -85,15 +98,13 @@
             document.getElementById("android").style = "display: block;";
         }
     </script>
-    <div class="cal-container">
-        <p class = "legenda">Legenda</p>
-        <p style="font-weight: bold;">Cursos inclusos:</p>
-        <p>Matemática discreta</p>
-        <p>Fundamentos da matemática</p>
-        <p>Algoritmos e técnicas de programação</p>
-        <p>Introdução à ciência da computação</p>
-        <p>Física para computação</p>
-        <p>Lógica</p>
+    <div class="descricao-container">
+        <p style="font-weight: bold; margin: 0%; margin-top: 10px;">Cursos inclusos:</p>
+        <p class="descricao">Matemática discreta
+        <p class="descricao">Fundamentos da matemática
+        <p class="descricao">Algoritmos e técnicas de programação
+        <p class="descricao">Introdução à ciência da computação
+        <p class="descricao">Física para computação
     </div>
 </body>
 
