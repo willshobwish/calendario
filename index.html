@@ -34,7 +34,7 @@
 
     .cal-container {
         max-width: 800px;
-        min-width: 600px;
+        min-width: 800px;
         height: 600px;
         position: relative;
         overflow: hidden;
@@ -61,7 +61,8 @@
     }
 
     .descricao-container{
-        margin-left: 10px;
+        margin-left: 20px;
+        margin-bottom: 200px;
     }
 
     .descricao{
@@ -72,7 +73,7 @@
 <body>
     <div class="cal-container">
         <!-- Substitua a linha abaixo com o seu próprio calendário -->
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hNTIwMjFlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MGU2Njk5Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NDE5ZTY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200OWIyMjg0NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%230047a8&color=%230B8043&color=%23007b83&color=%23202124&color=%23174ea6&showTitle=0&showNav=1&showPrint=0&showTabs=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21hNTIwMjFlOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb201MGU2Njk5Y0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200NDE5ZTY3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb200OWIyMjg0NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%230047a8&color=%230B8043&color=%23007b83&color=%23202124&color=%23174ea6&showTitle=0&showNav=1&showPrint=0&showTabs=1" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
     <br>
     <div style="width: 800px;">
@@ -107,14 +108,44 @@
             document.getElementById("android").style = "display: block;";
         }
     </script>
-    <div class="descricao-container">
-        <p style="font-weight: bold; margin: 0%; margin-top: 10px;">Cursos inclusos:</p>
-        <p class="descricao">Matemática discreta
-        <p class="descricao">Fundamentos da matemática
-        <p class="descricao">Algoritmos e técnicas de programação
-        <p class="descricao">Introdução à ciência da computação
-        <p class="descricao">Física para computação
-        <p class="descricao">Lógica
+    <div class="descricao-container" style="margin-top: 20px;">
+        <p class="descricao">
+            <b>Disciplinas do primeiro semestre:</b>
+            <br>
+            <b>Disciplinas em finalização - Atenção ao calendário
+                <br>
+                (Não haverá mais aulas, somente trabalhos e/ou provas)</b>
+            <br>
+            Algoritmos e técnicas de programação
+            <br>
+            Física para computação
+            <br>
+            Introdução à ciência da computação
+            <br>
+            Matemática discreta
+            <br>
+            Lógica
+            <br><br>
+            <b>Disciplinas do primeiro semestre finalizadas</b><br>
+            Fundamentos da matemática
+            <br><br>
+            <b>Disciplinas do segundo semestre:</b>
+            <br>
+            Algoritmos e tecnicas de programação II - Milton Shimabukuro
+            <br>
+            Cálculo diferencial e integral I -
+            <br>
+            Circuitos digitais - 
+            <br>
+            Geometria Analítica e vetores - 
+            <br>
+            Metodologia científica -
+            <br>
+            <br>
+            <b>Não haverá nesse semestre</b>
+            <br>
+            Física experimental 
+            </p>
     </div>
 </body>
 
