@@ -6,10 +6,11 @@
     <meta name="author" content="Willian Murayama">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/icone.png" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Calendário da computação">
-    <!-- Substitua a descrição abaixo --> 
+    <!-- Substitua a descrição abaixo -->
     <meta property="og:description"
         content="Calendário com provas e outros eventos relevantes para a turma ingressante em 2021 do curso de ciência de computação da FCT/Unesp.">
     <meta property="og:image" content="https://willshobwish.github.io/calendario/assets/icone.png">
@@ -50,89 +51,83 @@
         margin-bottom: 40px;
     }
 
-    .legenda{
+    .legenda {
         font-weight: bold;
         text-align: center;
     }
 
-    .botao{
+    .botao {
         max-width: 800px;
         min-width: 600px;
     }
 
-    .descricao-container{
+    .descricao-container {
         margin-left: 20px;
         margin-bottom: 200px;
     }
 
-    .descricao{
+    .descricao {
         margin: 0px;
     }
 </style>
 
 <body>
+    <div style="max-width: 800px; min-width: 600px;">
+        <h1 style="text-align: center;">Calendário desatualizado</h1>
+        <p>Os eventos não são mais atualizados, caso queira dar continuidade com o projeto entre em contato com o
+            desenvolvedor
+        </p>
+    </div>
     <div class="cal-container">
+
         <!-- Substitua a linha abaixo com o seu próprio calendário -->
-        <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&showTitle=0&showPrint=0&showTabs=1&src=d2lsbGlhbi5tdXJheWFtYUB1bmVzcC5icg&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203Y2Q1MDhlZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iYzM0ODI3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203MjllOTIwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21jNTFlNzU4M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%237986CB&color=%23007b83&color=%230047a8&color=%230B8043&color=%23202124&color=%230047a8" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe id="cal"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FSao_Paulo&showTitle=0&showPrint=0&showTabs=1&src=d2lsbGlhbi5tdXJheWFtYUB1bmVzcC5icg&src=Y19sanYxODJhaGVxYW4wYWcwOHNtNWtna2Q1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203Y2Q1MDhlZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21iYzM0ODI3OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=cHQtYnIuYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb203MjllOTIwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y19jbGFzc3Jvb21jNTFlNzU4M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%237986CB&color=%23007b83&color=%230047a8&color=%230B8043&color=%23202124&color=%230047a8"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
     <br>
     <div style="width: 800px;">
         <div class="container">
-            <div style="text-align: center;"class="row">
+            <div style="text-align: center;" class="row">
                 <div class="col">
-                    <a type="button" class="btn btn-primary btn-lg" onclick="show()" href="#android">Assinar calendário no Android</a>
-                    <div id="android"> <div>Para assinar o calendário no Android, <a
-                        href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta página</a> (confira
-                    se você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:</div>
-                 <!-- Substitua o value abaixo com o ID do calendário -->    
-                <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;"
-                    value="c_fnk4kp46gh4l59nspgmci7q2n4@group.calendar.google.com">
-                <br>
-                <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
-                <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a> </div>
-                    <!-- Substitua o link abaixo com o link iCal --> </div>
+                    <a type="button" class="btn btn-primary btn-lg" onclick="show()" href="#android">Assinar calendário
+                        no Android</a>
+                    <div id="android">
+                        <div>Para assinar o calendário no Android, <a
+                                href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta
+                                página</a> (confira
+                            se você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:
+                        </div>
+                        <!-- Substitua o value abaixo com o ID do calendário -->
+                        <input id="input" type="text"
+                            style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;"
+                            value="c_fnk4kp46gh4l59nspgmci7q2n4@group.calendar.google.com">
+                        <br>
+                        <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
+                        <a
+                            href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso
+                            você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a>
+                    </div>
+                    <!-- Substitua o link abaixo com o link iCal -->
+                </div>
                 <div class="col">
-                    <a type="button" class="btn btn-primary btn-lg" href="webcal://calendar.google.com/calendar/ical/c_ljv182aheqan0ag08sm5kgkd54%40group.calendar.google.com/public/basic.ics">
-                    Assinar calendário no iOS</a>
+                    <a type="button" class="btn btn-primary btn-lg"
+                        href="webcal://calendar.google.com/calendar/ical/c_ljv182aheqan0ag08sm5kgkd54%40group.calendar.google.com/public/basic.ics">
+                        Assinar calendário no iOS</a>
                 </div>
             </div>
-    </div>
-    <script>
-        // Campo do ID Android - Copiar texto ao clicar
-        document.getElementById("input").onclick = function () {
-            this.select();
-            document.execCommand('copy');
-        };
-        // Botão Android - Mostrar instruções
-        function show() {
-            document.getElementById("android").style = "display: block;";
-        }
-    </script>
-    <!-- <div class="descricao-container" style="margin-top: 20px;">
-        <p class="descricao">
-            <br>
-            <b>Atenção: as atividades do Google Classroom não estão sincronizadas, somente os eventos registrados pelo autor na Agenda estão sincronizadas</b>
-            <br>
-            <br>
-            <b>Disciplinas do segundo semestre:</b>
-            <br>
-            Algoritmos e técnicas de programação II
-            <br>
-            Cálculo diferencial e integral I 
-            <br>
-            Circuitos digitais
-            <br>
-            Física experimental
-            <br>
-            Geometria analítica e vetores
-            <br>
-            Metodologia científica
-            <br>
-            <br>
-            <b>Disciplinas optativas:</b>
-            <br>
-            Desenvolvimento Web com JavaScript
-    </div> -->
+        </div>
+        <script>
+            // Campo do ID Android - Copiar texto ao clicar
+            document.getElementById("input").onclick = function () {
+                this.select();
+                document.execCommand('copy');
+            };
+            // Botão Android - Mostrar instruções
+            function show() {
+                document.getElementById("android").style = "display: block;";
+            }
+        </script>
 </body>
 
 </html>
